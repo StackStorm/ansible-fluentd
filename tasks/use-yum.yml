@@ -30,11 +30,11 @@
 
 
 - name: install gcc and libcurlXXX for compiling plugins
-  yum: name={{ item }} state=present
-  with_items:
-    - gcc
-    - libcurl
-    - libcurl-devel
+  yum: 
+    name:
+      - gcc
+      - libcurl
+      - libcurl-devel
   when: tdagent_plugins is defined or tdagent_plugins_versions is defined
 
 
