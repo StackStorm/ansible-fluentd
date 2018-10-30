@@ -8,8 +8,8 @@
 #
 
 - name: install apt-related binaries for Ansible to work
-  apt: 
-    update_cache=yes
+  apt:
+    update_cache: yes
     name:
       - python-software-properties
       - apt-transport-https
@@ -36,7 +36,7 @@
 
 - name: install libcurl and make for compiling plugins
   apt:
-    update_cache=yes
+    update_cache: yes
     name:
       - libcurl4-gnutls-dev
       - build-essential
